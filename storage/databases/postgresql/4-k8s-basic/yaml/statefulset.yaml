@@ -67,7 +67,7 @@ spec:
       terminationGracePeriodSeconds: 30
       initContainers:
       - name: init
-        image: postgres:15.0
+        image: postgres:16
         command: [ "bash", "-c" ]
         args:
         - |

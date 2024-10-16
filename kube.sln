@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "c#", "c#", "{0850209C-9ECE-48D6-9F05-EAEAB92B5D9E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "work", "c#\src\work.csproj", "{A041C534-20D3-4030-BF4E-381CB8091E31}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "monitoring", "monitoring", "{C551A3CB-E9B3-46E6-BAE7-2BAD2BD29785}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "prometheus", "prometheus", "{F1421504-10B5-4F6F-AA55-EDFFF6470FCA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dotnet-application", "dotnet-application", "{80C5045F-E349-4304-8420-9D935E85FED2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "work", "monitoring\prometheus\dotnet-application\src\work.csproj", "{6B497A3D-D044-43CC-ADDB-0A4DDFF2A957}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tracing", "tracing", "{51843D59-F2C6-491E-8B48-BAB89F6D6C0D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "applications-go", "applications-go", "{E71DA79F-B481-410E-8C0B-C61233E0CC34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "videos-api-netcore", "videos-api-netcore", "{4C68B342-A7C4-4FF3-BA86-1B7F83445816}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "videos-api", "tracing\applications-go\videos-api-netcore\src\videos-api.csproj", "{8D06D6B6-F1A5-494E-865F-5CAE72061C8C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A041C534-20D3-4030-BF4E-381CB8091E31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A041C534-20D3-4030-BF4E-381CB8091E31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A041C534-20D3-4030-BF4E-381CB8091E31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A041C534-20D3-4030-BF4E-381CB8091E31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B497A3D-D044-43CC-ADDB-0A4DDFF2A957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B497A3D-D044-43CC-ADDB-0A4DDFF2A957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B497A3D-D044-43CC-ADDB-0A4DDFF2A957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B497A3D-D044-43CC-ADDB-0A4DDFF2A957}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D06D6B6-F1A5-494E-865F-5CAE72061C8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D06D6B6-F1A5-494E-865F-5CAE72061C8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D06D6B6-F1A5-494E-865F-5CAE72061C8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D06D6B6-F1A5-494E-865F-5CAE72061C8C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A041C534-20D3-4030-BF4E-381CB8091E31} = {0850209C-9ECE-48D6-9F05-EAEAB92B5D9E}
+		{F1421504-10B5-4F6F-AA55-EDFFF6470FCA} = {C551A3CB-E9B3-46E6-BAE7-2BAD2BD29785}
+		{80C5045F-E349-4304-8420-9D935E85FED2} = {F1421504-10B5-4F6F-AA55-EDFFF6470FCA}
+		{6B497A3D-D044-43CC-ADDB-0A4DDFF2A957} = {80C5045F-E349-4304-8420-9D935E85FED2}
+		{E71DA79F-B481-410E-8C0B-C61233E0CC34} = {51843D59-F2C6-491E-8B48-BAB89F6D6C0D}
+		{4C68B342-A7C4-4FF3-BA86-1B7F83445816} = {E71DA79F-B481-410E-8C0B-C61233E0CC34}
+		{8D06D6B6-F1A5-494E-865F-5CAE72061C8C} = {4C68B342-A7C4-4FF3-BA86-1B7F83445816}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D5811FA-35BF-48EE-AE29-1BD8ACA7E666}
+	EndGlobalSection
+EndGlobal
