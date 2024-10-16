@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-postgres-access
+  namespace: postgresql
+spec:
+  podSelector:
+    matchLabels:
+      app: postgres
+  ingress:
+  - from:
+    - podSelector: {}  # 모든 Pod에서 접근 가능
+    ports:
+    - protocol: TCP
+      port: 5432  # PostgreSQL 포트
