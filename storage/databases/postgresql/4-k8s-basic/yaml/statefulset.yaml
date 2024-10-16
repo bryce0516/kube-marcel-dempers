@@ -2,7 +2,6 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: postgres
-  namespace: postgresql
 data: 
   pg_hba.conf: |+
     # TYPE  DATABASE        USER            ADDRESS                 METHOD
@@ -54,7 +53,6 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: postgres
-  namespace: postgresql
 spec:
   selector:
     matchLabels:
@@ -81,7 +79,7 @@ spec:
           readOnly: false
       containers:
       - name: postgres
-        image: postgres:15.0
+        image: postgres:16
         args: ["-c", "config_file=/config/postgresql.conf"]
         ports:
         - containerPort: 5432
@@ -133,7 +131,6 @@ apiVersion: v1
 kind: Service
 metadata:
   name: postgres
-  namespace: postgresql
   labels:
     app: postgres
 spec:
@@ -144,35 +141,3 @@ spec:
   clusterIP: None
   selector:
     app: postgres
----
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: postgres-pv
-  labels:
-    app: postgres
-spec:
-  capacity:
-    storage: 100Mi
-  volumeMode: Filesystem
-  accessModes:
-    - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Retain
-  storageClassName: standard
-  hostPath:
-    path: "/mnt/data/postgresql"
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: postgres-pvc
-  namespace: postgresql
-  labels:
-    app: postgres
-spec:
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: standard
-  resources:
-    requests:
-      storage: 100Mi
