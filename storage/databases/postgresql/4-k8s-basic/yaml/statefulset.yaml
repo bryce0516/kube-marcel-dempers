@@ -141,3 +141,17 @@ spec:
   clusterIP: None
   selector:
     app: postgres
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: postgres-pv
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: standard  # StorageClass와 일치해야 함
+  hostPath:
+    path: "/mnt/data/postgres"  # 서버에서 실제로 사용될 경로
