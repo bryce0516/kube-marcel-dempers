@@ -57,7 +57,7 @@ spec:
   selector:
     matchLabels:
       app: postgres
-  serviceName: headless
+  serviceName: postgres
   replicas: 1
   template:
     metadata:
@@ -130,7 +130,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: headless
+  name: postgres
   labels:
     app: postgres
 spec:
