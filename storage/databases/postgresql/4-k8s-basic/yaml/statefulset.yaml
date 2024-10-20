@@ -57,7 +57,7 @@ spec:
   selector:
     matchLabels:
       app: postgres
-  serviceName: "postgres"
+  serviceName: postgres
   replicas: 1
   template:
     metadata:
